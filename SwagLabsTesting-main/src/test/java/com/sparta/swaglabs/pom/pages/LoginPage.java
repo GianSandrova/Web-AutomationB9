@@ -12,6 +12,7 @@ public class LoginPage extends Page {
         super(driver);
         goToLoginPage();
     }
+    By errorMessage = By.cssSelector("[data-test='error']");
 
     private void goToLoginPage() {
         driver.get("https://www.saucedemo.com/");
@@ -36,6 +37,9 @@ public class LoginPage extends Page {
         } else {
             return null;
         }
+    }
+    public String getErrorMessage() {
+        return driver.findElement(errorMessage).getText();
     }
     public void openMenu() {
         driver.findElement(By.id("react-burger-menu-btn")).click();

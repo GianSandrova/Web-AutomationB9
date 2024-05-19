@@ -61,16 +61,11 @@ public class LoginSteps {
         assertTrue(loginPage.getError().contains(expectedError));
     }
 
-    @Then("I should see a \"username is required\" error message")
-    public void iShouldSeeAUsernameIsRequiredErrorMessage() {
-        String expectedError = "Username is required";
-        assertTrue(loginPage.getError().contains(expectedError));
-    }
-
-    @Then("I should see a \"password is required\" error message")
-    public void iShouldSeeAPasswordIsRequiredErrorMessage() {
-        String expectedError = "Password is required";
-        assertTrue(loginPage.getError().contains(expectedError));
+    @Then("I should see an error message {string}")
+    public void userloginfailedandshowerrormessage(String expectedMessage) {
+        String actualErrorMessage = loginPage.getErrorMessage();
+        assertTrue("Expected error message : '" + expectedMessage + "' not found. Found: " + actualErrorMessage,
+                actualErrorMessage.contains(expectedMessage));
     }
 
     @Given("I am logged in")
