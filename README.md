@@ -8,10 +8,8 @@ Ini adalah proyek pengujian otomatis pada web e-commerce https://saucedemo.com/ 
 - [Tools yang Digunakan](#tools-yang-digunakan)
 - [Getting Started](#getting-started)
   - [Pre-requisites](#pre-requisites)
-  - [Installation](#installation)
-  - [Folder structure (Maven, simplified)](#folder-structure-maven-simplified)
+  - [Installation & Running Test Script](#installation)
 - [Alur Kerja Pembuatan Test Script](#alur-kerja-pembuatan-test-script)
-- [Running Test Script](#running-test-script)
 - [Test Case Design](#test-case-design)
 - [Author](#author)
 - [References](#references)
@@ -59,10 +57,6 @@ Agar dapat menjalankan project ini, pastikan bahwa perangkat Anda telah memenuhi
 **Kembali ke [Daftar Isi](#table-of-contents)**
 
 ### Installation
-
-> <big><b>Warning (for Powershell users)</b></big><br>
-> When adding flag to maven command, surround it with single quotes. For example:<br> > `mvn test '-Dcucumber.filter.name="^Successful\s.*$"'`<br><br>
-> For CMD users, just add the flag without any quotes. For the same example:<br> > `mvn test -Dcucumber.filter.name="^Successful\s.*$"`<br><br>
 
 1. Clone this repository to your local machine using this command on your terminal or command prompt:
 
@@ -209,31 +203,6 @@ git clone https://github.com/GianSandrova/Web-AutomationB9.git
         burgerMenu.click();
     }
     ```
-
-**Kembali ke [Daftar Isi](#table-of-contents)**
-
-## Running Test Script
-
-Terdapat empat pilihan dalam menjalankan test script pada project ini, yaitu:
-
-1. Menjalankan seluruh test case yang ada pada project ini dengan hasil akhir berupa report dari Cucumber. Untuk proses ini, jalankan perintah berikut:
-   ```bash
-   mvn test
-   ```
-2. Menjalankan seluruh test case yang ada pada project ini dengan hasil akhir berupa report dari Surefire. Untuk proses ini, jalankan perintah berikut:
-   ```bash
-   mvn surefire-report:report
-   ```
-3. Menjalankan test case dengan filter nama skenario tertentu (CASE SENSITIVE) dengan hasil akhir berupa report dari Cucumber. Untuk proses ini, jalankan perintah berikut:
-   ```bash
-   mvn test '-Dcucumber.filter.name="^<nama skenario tertentu>$"'
-   ```
-4. Menjalankan test case dengan filter nama skenario tertentu (CASE SENSITIVE) dengan hasil akhir berupa report dari Surefire. Untuk proses ini, jalankan perintah berikut:
-   ```bash
-   mvn surefire-report:report '-Dcucumber.filter.name="^<nama skenario tertentu>$"'
-   ```
-
-Rata-rata waktu eksekusi seluruh test case adalah sekitar 20 hingga 30 detik. Waktu eksekusi dapat berbeda-beda tergantung dari spesifikasi perangkat yang digunakan.
 
 **Kembali ke [Daftar Isi](#table-of-contents)**
 
