@@ -56,7 +56,7 @@ Agar dapat menjalankan project ini, pastikan bahwa perangkat Anda telah memenuhi
 
 **Kembali ke [Daftar Isi](#table-of-contents)**
 
-### Installation
+### Installation & Running Test Script
 
 1. Clone this repository to your local machine using this command on your terminal or command prompt:
 
